@@ -151,80 +151,6 @@
         ]
       }
     },
-    "/task/published/": {
-      "get": {
-        "summary": "published tasks",
-        "description": "published tasks",
-        "operationId": "getPublishedTasks",
-        "parameters": [
-          {
-            "name": "appid",
-            "in": "query",
-            "description": "your appid for accessing the task",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "appkey",
-            "in": "query",
-            "description": "your appkey for accessing the task",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Task Response",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/task"
-              }
-            }
-          }
-        },
-        "tags": [
-          "Task"
-        ]
-      }
-    },
-    "/task/draft/": {
-      "get": {
-        "summary": "draft tasks",
-        "description": "draft tasks",
-        "operationId": "getDraftTasks",
-        "parameters": [
-          {
-            "name": "appid",
-            "in": "query",
-            "description": "your appid for accessing the task",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "appkey",
-            "in": "query",
-            "description": "your appkey for accessing the task",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "task response",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/task"
-              }
-            }
-          }
-        },
-        "tags": [
-          "Task"
-        ]
-      }
-    },
     "/task/{task_id}/": {
       "get": {
         "summary": "Retrieve a task using its slug",
@@ -559,61 +485,10 @@
         ]
       }
     },
-    "/task/tags/byweek/": {
-      "get": {
-        "summary": "task tags by week",
-        "description": "task tags by week",
-        "operationId": "getTaskTagsByWeek",
-        "parameters": [
-          {
-            "name": "appid",
-            "in": "query",
-            "description": "your appid for accessing the task",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "appkey",
-            "in": "query",
-            "description": "your appkey for accessing the task",
-            "required": true,
-            "type": "string"
-          },        
-          {
-            "name": "week",
-            "in": "query",
-            "description": "the week to retrieve tags by",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "year",
-            "in": "query",
-            "description": "the year to retrieve tags by",
-            "required": false,
-            "type": "string"
-          }          
-        ],
-        "responses": {
-          "200": {
-            "description": "Task Tag Response",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/task"
-              }
-            }
-          }
-        },
-        "tags": [
-          "Tags"
-        ]
-      }
-    },
-    "/task/tags/byweek/{tag}/task/": {
+    "/task/tags/{tag}/task/": {
       "get": {
         "summary": "task tags by week tasks",
-        "description":  "task tags by week tasks",
+        "description": "task tags by week tasks",
         "operationId": "getTaskTagCTask",
         "parameters": [
           {
@@ -644,43 +519,6 @@
         },
         "tags": [
           "Tags"
-        ]
-      }
-    },
-    "/task/byweek/": {
-      "get": {
-        "summary": "tasks by week",
-        "description": "tasks by week",
-        "operationId": "getTasksByWeek",
-        "parameters": [
-          {
-            "name": "appid",
-            "in": "query",
-            "description": "your appid for accessing the task",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "appkey",
-            "in": "query",
-            "description": "your appkey for accessing the task",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Task Response",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/task"
-              }
-            }
-          }
-        },
-        "tags": [
-          "Task"
         ]
       }
     }
