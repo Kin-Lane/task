@@ -47,10 +47,10 @@ $app->get($route, function ()  use ($app,$Plan){
 			$F = array();
 			$F['task_id'] = 0;
 			$F['post_date'] = date();
-			$F['title'] = "My tasks, not yours!"
+			$F['title'] = "My tasks, not yours!";
 			$F['body'] = "";
 			$F['url'] = "http://apievangelist.com";
-			$F['status'] = "active";			
+			$F['status'] = "active";
 			}
 		else
 			{
