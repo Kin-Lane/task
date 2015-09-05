@@ -31,6 +31,10 @@
         {
           "type": "x-postman",
           "url": "https://kin-lane.github.io/task/postman.json"
+        },
+        {
+          "type": "x-api-science",
+          "url": "https://kin-lane.github.io/task/status/"
         }
       ],
       "contact": [
