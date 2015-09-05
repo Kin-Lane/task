@@ -1,6 +1,6 @@
 <?php
 $route = '/task/';
-$app->get($route, function ()  use ($app){
+$app->get($route, function ()  use ($app,$Plan){
 
 	$ReturnObject = array();
 
@@ -42,14 +42,26 @@ $app->get($route, function ()  use ($app){
 		$host = $_SERVER['HTTP_HOST'];
 		$task_id = prepareIdOut($task_id,$host);
 
-		$F = array();
-		$F['task_id'] = $task_id;
-		$F['post_date'] = $post_date;
-		$F['title'] = $title;
-		$F['body'] = $body;
-		$F['url'] = $url;
-		$F['status'] = $status;
-
+		if($Plan=="Public")
+			{
+			$F = array();
+			$F['task_id'] = 0;
+			$F['post_date'] = date();
+			$F['title'] = "My tasks, not yours!"
+			$F['body'] = "";
+			$F['url'] = "http://apievangelist.com";
+			$F['status'] = "active";			
+			}
+		else
+			{
+			$F = array();
+			$F['task_id'] = $task_id;
+			$F['post_date'] = $post_date;
+			$F['title'] = $title;
+			$F['body'] = $body;
+			$F['url'] = $url;
+			$F['status'] = $status;
+			}
 		array_push($ReturnObject, $F);
 		}
 
