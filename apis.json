@@ -1,4 +1,4 @@
-[{
+{
 	"name": "Kin Lane Task API",
 	"description": "I am the worst with task tracking. After several tasking platforms failed me and went away, I stopped using any new ones. I rely on email, my notebook, and link curation for much of my tasking. I'm trying to change this, but having a tasking API. I haven't actually started using this, but will at some point. So this API is probbly a lower priority, but hopefully that will change.",
 	"image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-task.png",
@@ -6,7 +6,7 @@
 	"tags": ["Kin Lane Task API"],
 	"created": "2016-04-04",
 	"modified": "2016-04-04",
-	"url": "https://kin-lane.github.io/task/"
+	"url": "https://kin-lane.github.io/task/",
 	"specificationVersion": "0.14",
 	"apis": [{
 		"name": "Kin Lane Task API",
@@ -117,4 +117,4 @@
 		"x-twitter": "apievangelist",
 		"email": "info@apievangelist.com"
 	}]
-}]
+}
